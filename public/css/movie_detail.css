@@ -1,0 +1,45 @@
+.showtime-list {
+    margin-top: 10px;
+}
+
+.showtime-link {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    color: #007bff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.showtime-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.seat-map {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr); /* Điều chỉnh số cột cho phù hợp */
+    gap: 5px;
+}
+
+.seat-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.seat {
+    /* width: 30px;  */
+    padding: 5px;
+    height: 30px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    text-align: center;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: blue;
+    color: white;
+}

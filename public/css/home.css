@@ -1,0 +1,21 @@
+.movie-container {
+    position: relative; /* Để đặt vị trí cho h3 */
+}
+
+.movie-title {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    background-color: rgba(255, 159, 102, 0.8); /* Màu nền mờ, có thể điều chỉnh */
+    display: flex;
+    align-items: center; /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    opacity: 0; /* Ẩn tên phim ban đầu */
+    transition: opacity 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+}
+
+.movie-container:hover .movie-title {
+    opacity: 1; /* Hiển thị tên phim khi hover */
+}
