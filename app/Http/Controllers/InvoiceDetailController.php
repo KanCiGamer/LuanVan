@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\invoie;
+use App\Models\invoice_detail;
 use Illuminate\Http\Request;
 
-class InvoieController extends Controller
+class InvoieDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -34,7 +34,7 @@ class InvoieController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(invoie $invoie)
+    public function show(invoice_detail $invoie_detail)
     {
         //
     }
@@ -42,7 +42,7 @@ class InvoieController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(invoie $invoie)
+    public function edit(invoice_detail $invoie_detail)
     {
         //
     }
@@ -50,7 +50,7 @@ class InvoieController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, invoie $invoie)
+    public function update(Request $request, invoice_detail $invoie_detail)
     {
         //
     }
@@ -58,7 +58,7 @@ class InvoieController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(invoie $invoie)
+    public function destroy(invoice_detail $invoie_detail)
     {
         //
     }

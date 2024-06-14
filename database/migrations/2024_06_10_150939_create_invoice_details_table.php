@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('invoie_details', function (Blueprint $table) {
+        Schema::create('invoice_details', function (Blueprint $table) {
             $table->char('invoice_id', 10);  // mã hóa đơn - khóa ngoại
             $table->unsignedBigInteger('showtime_id');  // mã suất chiếu - khóa ngoại
 
