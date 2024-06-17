@@ -17,12 +17,17 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/movie/{id}', [HomeController::class,'MovieDetail'])->name('MovieDetail');
 Route::get('/showtimedetail/{id}', [HomeController::class,'ShowTimeDetail'])->name('ShowTimeSeat');
+Route::post('/book-ticket',[HomeController::class, 'book_ticket'])->name('BookTicket');
+Route::get('/payment-page', [HomeController::class, 'showPaymentPage'])->name('ShowPagePayment');
+Route::post('/payment',[HomeController::class, 'payment'])->name('Payment');
 
 // trang đăng nhập/ đăng ký
 Route::get('/login', function(){return view('./user/login');})->name('LoginPage');
 
 // trang thông báo yêu cầu xác minh tài khoản
 Route::get('/notify', function () {return view('./layouts/notify');})->name('VerifyNotify');
+
+
 // chức năng đăng ký, đăng nhập và đăng xuất
 Route::post('/register', [UsersController::class, 'register'])->name('UserRegister');
 Route::post('/login', [UsersController::class, 'login'])->name('UserLogin');

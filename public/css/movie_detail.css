@@ -31,15 +31,20 @@
 
 .seat {
     /* width: 30px;  */
-    padding: 5px;
-    height: 30px;
+    padding: 8px;
+    /* height: 30px; */
     background-color: lightgray;
     border: 1px solid gray;
     text-align: center;
     cursor: pointer;
+    border-radius: 5px; /* Bo tròn góc */
 }
 
 .seat.selected {
     background-color: blue;
     color: white;
+}
+.seat.sold {
+    background-color: red; 
+    cursor: not-allowed; 
 }

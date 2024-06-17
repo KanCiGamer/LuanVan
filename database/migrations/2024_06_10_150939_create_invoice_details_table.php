@@ -12,18 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('invoice_details', function (Blueprint $table) {
+            $table->bigIncrements('id');  // id tự động tăng
             $table->char('invoice_id', 10);  // mã hóa đơn - khóa ngoại
             $table->unsignedBigInteger('showtime_id');  // mã suất chiếu - khóa ngoại
-
+            $table->unsignedBigInteger('seat_id');  // mã ghế ngồi - khóa ngoại
             $table->double('gia_tien')->nullable(false);  // giá tiền - không để trống
-            
-            // Đặt khóa chính tổng hợp
-            $table->primary(['invoice_id', 'showtime_id']);
-            
+    
             // Định nghĩa các khóa ngoại
             $table->foreign('invoice_id')->references('invoice_id')->on('invoices')->onDelete('cascade');
             $table->foreign('showtime_id')->references('showtime_id')->on('show_times')->onDelete('cascade');
-            
+            $table->foreign('seat_id')->references('seat_id')->on('seats')->onDelete('cascade');
+    
             $table->timestamps();
         });
     }

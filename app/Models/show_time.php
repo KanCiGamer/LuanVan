@@ -29,4 +29,8 @@ class show_time extends Model
     {
         return $this->belongsTo(cinema_room::class, 'cinema_room_id', 'cinema_room_id');
     }
+    public function invoice_detail()
+    {
+        return $this->hasMany(invoice_detail::class, 'showtime_id', 'showtime_id');
+    }
 }
